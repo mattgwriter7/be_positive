@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class Config {
   
   static const  String    app_name                  = "flutt_start_3";
-  static const  String    app_version               = "1.0.alpha";
+  static const  String    app_version               = "1.0.alpha.1";
   
   //  timeouts and delays
   static int              server_timeout            = 10;     // seconds

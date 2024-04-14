@@ -3,10 +3,12 @@
 This is a super-simple starting place for Flutter projects.
 
 ## LEFT OFF
-* added Config and Utils classes
-* made Start page stateful (and added some hooks)
+* made UI for home page
+    + all the main sections are there: header, 3 steps, Day carousel, Bottom tips
 
 ## NEXT
+* Flesh out UI? Or:
+* Add navigation and structure?
 * ?
 
 ## FUTURE
@@ -17,5 +19,4 @@ This is a super-simple starting place for Flutter projects.
 ## NOTES
 (For detailed notes see [NOTES.md](./NOTES.md) )
 
-Basically, there are 2 pages: Start and End. You can navigate between them.
 
