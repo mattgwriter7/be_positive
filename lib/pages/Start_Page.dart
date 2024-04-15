@@ -72,7 +72,7 @@ class _Start_PageState extends State<Start_Page> {
             centerTitle: true,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            iconTheme: IconThemeData(color: Colors.white),
+            iconTheme: IconThemeData(color: Colors.black),
           ), 
           drawer: Drawer(),
           body: Container(
@@ -90,20 +90,33 @@ class _Start_PageState extends State<Start_Page> {
                   /* START OF 3 THINGS HOLDER */
                   Container(
                       width: double.infinity,
-                      height: 370,
+                      height: 360,
                       color: Colors.green,
                       child: Stack(
                         children: [
+                          Positioned(
+                            left: 0,  //  this is where an animation can happen
+                            top: 0,
+                            child: Opacity(opacity: 1, child: Image.asset('./assets/images/clouds_1300x375.png')),
+                          ),
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0,0,0,200),
+                              child: Container(
+                                width: 200,
+                                child: Image.asset('./assets/images/heading_be_positive.png')
+                              ),
+                            )),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Container(
                                 width: double.infinity,
-                                height: 170,
-                                color: Colors.pink,
+                                height: 160,
+                                color: Color(0xfffcfcfc),
                                 child: Padding(
                                   padding: const EdgeInsets.fromLTRB(0,40,0,0),
-                                  child: placeHolder('1. Grat'),
+                                  child: placeHolder('1. Show Gratitude'),
                                 ),
                               ),                         
                             ],
@@ -111,7 +124,7 @@ class _Start_PageState extends State<Start_Page> {
                                                 
                           Positioned(
                             left: 0,
-                            bottom: 120,
+                            bottom: 110,
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               height: 100,
@@ -121,15 +134,16 @@ class _Start_PageState extends State<Start_Page> {
                                   //color: Colors.black,
                                   width: MediaQuery.of(context).size.width * .9,
                                   decoration: BoxDecoration(
-                                    color: Colors.black,
+                                    color: Color(0xff58afdd),
                                     border: Border.all(
-                                      color: Colors.black,
+                                      color: Color(0xff46a2da),
+                                      width: 7,
                                     ),
                                     borderRadius: BorderRadius.all(Radius.circular(20))
                                   ),
                                   child: Center(child: Text(
-                                    'instructions here',
-                                    style: TextStyle( color: Colors.white, fontSize: 24))),
+                                    'Every day do 3 positive things...',
+                                    style: TextStyle( color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold))),
                                 ),
                               ),                     
                             ),
@@ -160,7 +174,7 @@ class _Start_PageState extends State<Start_Page> {
                   /* START OF CAROUSEL HOLDER */
                   Container(
                       width: double.infinity,
-                      height: 500,
+                      height: 498,
                       color: Colors.pink,
                       child: Column(
                         children: [
@@ -172,12 +186,13 @@ class _Start_PageState extends State<Start_Page> {
                           ), 
                           Container(
                               width: double.infinity,
-                              height: 120,
+                              height: 118,
                               color: Colors.grey,
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
+                                    SizedBox(width: 10),
                                     buildDay(1),    
                                     SizedBox(width: 12),
                                     buildDay(2),
@@ -191,6 +206,7 @@ class _Start_PageState extends State<Start_Page> {
                                     buildDay(6),
                                     SizedBox(width: 12),
                                     buildDay(7),
+                                    SizedBox(width: 10),
                                   ]
                                 ),
                               ),
