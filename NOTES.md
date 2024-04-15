@@ -15,3 +15,6 @@ Make a simple app for positive thinking.
 * REALLY_IMPORTANT variables can be all caps and underscored
    + but there should only be 1 or 2 "really important" variables in an app  
 
+## RESOURCES
+Blue Swatches
+https://www.pinterest.ca/pin/816699713653654833/
